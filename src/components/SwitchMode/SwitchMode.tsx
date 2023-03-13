@@ -16,23 +16,20 @@ export const SwitchMode = () => {
   const select = <SelectIcon color={`${value ? '#4D5562' : '#5D5FEF'}`} />;
   return (
     <div className={styles.button__group}>
-      <div className={styles.border}>
-        <button
-          className={`${styles.button} ${value ? styles.button_active : ''}`}
-          onClick={() => switchButton(true)}
-        >
-          {eye}
-          <span className={styles.text}>Runtime</span>
-        </button>
-      </div>
-      <div className={styles.border}>
-        <button
-          className={`${styles.button} ${!value ? styles.button_active : ''}`}
-          onClick={() => switchButton(false)}
-        >
-          {select} <span className={styles.text}>Constructor</span>
-        </button>
-      </div>
+      <button
+        className={`${styles.button} ${value ? styles.button_active : ''}`}
+        onClick={() => switchButton(true)}
+      >
+        {eye}
+        <span className={styles.text}>Runtime</span>
+      </button>
+
+      <button
+        className={`${styles.button} ${!value ? styles.button_active : ''}`}
+        onClick={() => switchButton(false)}
+      >
+        {select} <span className={styles.text}>Constructor</span>
+      </button>
     </div>
   );
 };
