@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './constructor.module.scss';
-import { Display } from './Blocks/Display/Display';
+import { Operators, Display, Numbers } from './Blocks/index';
 
 export const Constructor = () => {
   return (
@@ -8,8 +8,12 @@ export const Constructor = () => {
       <div className={styles.container}>
         <Display />
       </div>
-      <div className={styles.container}></div>
-      <div className={styles.container}></div>
+      <div className={styles.container}>
+        <Operators />
+      </div>
+      <div className={styles.container}>
+        <Numbers />
+      </div>
       <div className={styles.container}></div>
     </div>
   );
