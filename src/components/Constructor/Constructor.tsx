@@ -16,16 +16,6 @@ export const Constructor = () => {
           <Item name={it.name} id={it.id} area="constructor" />
         </div>
       ))}
-
-      {/* <div className={styles.container}>
-        <Operators />
-      </div>
-      <div className={styles.container}>
-        <Numbers />
-      </div>
-      <div className={styles.container}>
-        <Equal />
-      </div> */}
     </div>
   );
 };
