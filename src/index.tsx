@@ -10,6 +10,7 @@ const container = document.getElementById('root')!;
 const root = createRoot(container);
 import '@fontsource/inter/800.css';
 import '@fontsource/inter/500.css';
+import '@fontsource/inter/400.css';
 root.render(
   <React.StrictMode>
     <Provider store={store}>

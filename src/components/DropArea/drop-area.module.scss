@@ -1,0 +1,32 @@
+.wrapper {
+  border: 2px dashed #c4c4c4;
+  width: 243px;
+  min-height: 448px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #5d5fef;
+  margin-top: 12px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.content {
+  max-width: 127px;
+}
