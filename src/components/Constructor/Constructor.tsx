@@ -1,14 +1,23 @@
 import React from 'react';
 import styles from './constructor.module.scss';
 import { Operators, Display, Numbers, Equal } from './Blocks/index';
+import { useAppSelector } from '../../hooks/redux';
+import { constructorSlice } from '../../store/reducers/constructorReducer';
+import { Item } from '../Item/Item';
 
 export const Constructor = () => {
+  const items = useAppSelector((state) => state.constructorReducer.areas[0]);
+  console.log(items);
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <Display />
-      </div>
-      <div className={styles.container}>
+      {items.items.map((it) => (
+        <div className={styles.container} key={it.id}>
+          <Item name={it.name} id={it.id} area="constructor" />
+        </div>
+      ))}
+
+      {/* <div className={styles.container}>
         <Operators />
       </div>
       <div className={styles.container}>
@@ -16,7 +25,7 @@ export const Constructor = () => {
       </div>
       <div className={styles.container}>
         <Equal />
-      </div>
+      </div> */}
     </div>
   );
 };
