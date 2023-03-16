@@ -7,8 +7,7 @@ function App() {
   const { value } = useAppSelector((state) => state.modeSlice);
   return (
     <Layout>
-      <div style={{ minWidth: '240px' }}> {value ? <div></div> : <Constructor />}</div>
-
+      <div style={{ minWidth: '240px' }}>{value ? <div></div> : <Constructor />}</div>
       <DropArea />
     </Layout>
   );

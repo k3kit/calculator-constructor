@@ -95,7 +95,7 @@ export const Item: FC<ItemProps> = ({ name, id, area }) => {
       draggable={isDraggable()}
       onClick={clickHandler}
     >
-      {setContent(name)}
+      <div className={value ? styles.runtime : styles.constr}> {setContent(name)}</div>
     </div>
   );
 };

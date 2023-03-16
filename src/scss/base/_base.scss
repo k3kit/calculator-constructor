@@ -8,18 +8,3 @@ body {
   --color-black: #000000;
   --color-grey: #4d5562;
 }
-button {
-  transition: border 0.1s ease, background-color 0.1s ease, color 0.1s ease;
-}
-button:active {
-  transition: border 0.1s ease, background-color 0.1s ease, color 0.1s ease;
-
-  border: 2px solid #5d5fef;
-  background-color: #5d5fef;
-  color: white;
-}
-
-button:hover {
-  border: 2px solid #5d5fef;
-  transition: border 0.1s ease, background-color 0.2s ease, color 0.1s ease;
-}
