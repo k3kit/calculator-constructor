@@ -1,4 +1,4 @@
-<h1 align="center">calculator constructor</h1>
+<h1 align="center">Calculator constructor</h1>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/70204612/225605099-a0cbb9ce-026a-458e-aa2c-7b29e84f9907.png" width="70%"/>
 </p>
