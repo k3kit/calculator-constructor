@@ -1,0 +1,23 @@
+.wrapper {
+  width: 240px;
+  background: #ffffff;
+  padding: 4px;
+}
+
+.content {
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  color: #111827;
+  display: flex;
+  font-size: 36px;
+  font-weight: 800;
+  justify-content: flex-end;
+  line-height: 44px;
+  padding: 4px 8px;
+}
+
+.result {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+}
