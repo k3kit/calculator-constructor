@@ -1,0 +1,57 @@
+.wrapper {
+  border: 2px dashed #c4c4c4;
+  width: 243px;
+  min-height: 448px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+.heading {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #5d5fef;
+  margin-top: 12px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.content {
+  max-width: 127px;
+}
+
+.container {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 6%), 0 4px 6px rgb(0 0 0 / 10%);
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+.active {
+  background: #f0f9ff;
+  width: 243px;
+  height: 448px;
+  border-radius: 6px;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.droparea {
+  transition: border 0.3s ease, background-color 0.3s ease;
+  width: 243px;
+  height: 448px;
+  border-radius: 6px;
+}
