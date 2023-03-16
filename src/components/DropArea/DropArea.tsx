@@ -22,22 +22,28 @@ export const DropArea = () => {
 
   const dragOverHandler = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    if (dropArea.items.length === 0) dropAreaRef.current?.classList.add('active');
+    if (dropArea.items.length === 0) dropAreaRef.current?.classList.add(`${styles.active}`);
   };
 
   const dragLeaveHandler = (e: React.DragEvent<HTMLDivElement>) => {
-    dropAreaRef.current?.classList.remove('active');
+    dropAreaRef.current?.classList.remove(`${styles.active}`);
   };
 
   const dropHandler = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    dropAreaRef.current?.classList.remove('active');
+    dropAreaRef.current?.classList.remove(`${styles.active}`);
     if (isInDropArea()) dispatch(deleteItem(currentItem));
     dispatch(pushDroppedItem({ currentItem, currentItemPosition }));
   };
 
   return (
-    <div onDragLeave={dragLeaveHandler} onDrop={dropHandler} onDragOver={dragOverHandler}>
+    <div
+      onDragLeave={dragLeaveHandler}
+      onDrop={dropHandler}
+      onDragOver={dragOverHandler}
+      ref={dropAreaRef}
+      className={styles.droparea}
+    >
       {dropArea.items.length > 0 ? (
         dropArea.items?.map((it) => (
           <div className={styles.container} key={it.id}>

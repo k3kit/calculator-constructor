@@ -56,6 +56,7 @@ export const Item: FC<ItemProps> = ({ name, id, area }) => {
   };
 
   const dragEnterHandler = (e: React.DragEvent<HTMLDivElement>) => {
+    console.log('start');
     e.preventDefault();
     e.currentTarget.classList.add('dragover');
     if (name === 'display') {

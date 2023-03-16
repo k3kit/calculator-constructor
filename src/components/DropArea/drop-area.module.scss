@@ -8,6 +8,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  transition: border 0.3s ease, background-color 0.3s ease;
 }
 .heading {
   font-weight: 500;
@@ -38,4 +39,19 @@
   overflow: hidden;
   margin-bottom: 12px;
   user-select: none;
+}
+
+.active {
+  background: #f0f9ff;
+  width: 243px;
+  height: 448px;
+  border-radius: 6px;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.droparea {
+  transition: border 0.3s ease, background-color 0.3s ease;
+  width: 243px;
+  height: 448px;
+  border-radius: 6px;
 }
