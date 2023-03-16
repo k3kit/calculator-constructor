@@ -1,10 +1,12 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import switchMode from './reducers/mode';
-import constructorSlice from './reducers/constructorReducer';
+import modeSlice from './reducers/modeSlice';
+import constructorSlice from './reducers/constructorSlice';
+import runtimeSlice from './reducers/runtimeSlice';
 
 const rootReducer = combineReducers({
-  mode: switchMode,
-  constructorReducer: constructorSlice,
+  modeSlice: modeSlice,
+  constructorSlice: constructorSlice,
+  runtimeSlice: runtimeSlice,
 });
 export const store = configureStore({
   reducer: rootReducer,

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import styles from './switch.module.scss';
 import { ReactComponent as EyeIcon } from '../../assets/svg/eye.svg';
 import { ReactComponent as SelectIcon } from '../../assets/svg/selector.svg';
-import { switchMode } from '../../store/reducers/mode';
+import { modeSLice } from '../../store/reducers/modeSlice';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 
 export const SwitchMode = () => {
   const dispatch = useAppDispatch();
-  const { setMode } = switchMode.actions;
-  const { value } = useAppSelector((state) => state.mode);
+  const { setMode } = modeSLice.actions;
+  const { value } = useAppSelector((state) => state.modeSlice);
   const switchButton = (value: boolean) => {
     dispatch(setMode(value));
   };

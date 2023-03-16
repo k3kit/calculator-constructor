@@ -3,15 +3,15 @@ import styles from './drop-area.module.scss';
 import { ReactComponent as DropIcon } from '../../assets/svg/drop.svg';
 import { useSelector } from 'react-redux';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { constructorSlice } from '../../store/reducers/constructorReducer';
+import { constructorSlice } from '../../store/reducers/constructorSlice';
 import { Item } from '../Item/Item';
 export const DropArea = () => {
   const dropAreaRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
-  const dropArea = useAppSelector((state) => state.constructorReducer.areas[1]);
+  const dropArea = useAppSelector((state) => state.constructorSlice.areas[1]);
   const { setCurrentItem, setCurrentItemPosition, deleteItem, pushDroppedItem } =
     constructorSlice.actions;
-  const { currentItem, currentItemPosition } = useAppSelector((state) => state.constructorReducer);
+  const { currentItem, currentItemPosition } = useAppSelector((state) => state.constructorSlice);
   const isInDropArea = () => {
     for (let i = 0; i < dropArea.items.length; i++) {
       if (currentItem?.id === dropArea.items[i].id) return true;

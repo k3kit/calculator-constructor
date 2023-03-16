@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styles from './item.module.scss';
 import { Display, Equal, Numbers, Operators } from '../Constructor/Blocks';
-import { ItemType, constructorSlice } from '../../store/reducers/constructorReducer';
+import { ItemType, constructorSlice } from '../../store/reducers/constructorSlice';
 import { useDispatch } from 'react-redux';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 interface ItemProps extends ItemType {
@@ -10,9 +10,9 @@ interface ItemProps extends ItemType {
 export const Item: FC<ItemProps> = ({ name, id, area }) => {
   const dispatch = useAppDispatch();
   const { setCurrentItem, setCurrentItemPosition, deleteItem } = constructorSlice.actions;
-  const droparea = useAppSelector((state) => state.constructorReducer.areas[1]);
-  const { currentItem, areas } = useAppSelector((state) => state.constructorReducer);
-  const { value } = useAppSelector((state) => state.mode);
+  const droparea = useAppSelector((state) => state.constructorSlice.areas[1]);
+  const { currentItem, areas } = useAppSelector((state) => state.constructorSlice);
+  const { value } = useAppSelector((state) => state.modeSlice);
 
   const dragStartHandler = (e: React.DragEvent<HTMLDivElement>) => {
     dispatch(setCurrentItem({ id, name }));

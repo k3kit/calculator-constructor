@@ -8,7 +8,7 @@ type mode = {
 const initialState: mode = {
   value: false,
 };
-export const switchMode = createSlice({
+export const modeSLice = createSlice({
   name: 'switch',
   initialState,
   reducers: {
@@ -17,6 +17,5 @@ export const switchMode = createSlice({
     },
   },
 });
-// export const { setMode, toogleMode } = switchMode.actions;
-// export const selectMode = (state: RootState)=> state.v
-export default switchMode.reducer;
+
+export default modeSLice.reducer;
